@@ -4,6 +4,10 @@ function includes(array, elementToFind, fromIndex=0) {
 
   const myArray = [...array];
   
-
-  return myArray
+  const result = myArray.some((element, index)=>{
+      if (index<fromIndex) return false;
+      if (element===elementToFind) return true;
+  })
+  console.log(result)
+  return result
 }
